@@ -52,6 +52,13 @@ $config = [
         ],
         */
     ],
+    'modules' => [
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+            // 其他模块的设置
+        ],
+        // ... 其他模块 ...
+    ],
     'params' => $params,
 ];
 
@@ -68,7 +75,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['172.0.0.0/8', '::1'],
+        'allowedIPs' => ['*', '::1'],
     ];
 }
 
